@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-jetbrains-mono), monospace;
+}
+  
+@layer base {
+
+  :root {
+    --background: white;
+    --foreground: #181818;
+    --gray: #E2E3E7; 
+    --highlight: #3BBA9C;
+    --gray-inverted: #2A2B30;
+  }
+  
+  .dark {
+    --background: #181818;
+    --foreground: white;
+    --gray: #2A2B30; 
+    --highlight: #3BBA9C;
+    --gray-inverted: #E2E3E7;
+  }
+
+  body {
+    @apply font-primary bg-white text-black leading-loose;
+  }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  
+  .text-outline-hover {
+    -webkit-text-stroke: 1px #FFD700;
+  }
+
+  
+  
+}
