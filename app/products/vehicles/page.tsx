@@ -1,11 +1,6 @@
 "use client"
 import { RiEBikeLine } from "react-icons/ri";
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger, } from "@/components/ui/tabs"
-import { scooters } from "@/data/vehicles/scooters";
-import { bikes } from "@/data/vehicles/bikes";
-import { cars } from "@/data/vehicles/cars";
 
 export default function Vehicles(){
    return (
@@ -38,58 +33,19 @@ export default function Vehicles(){
       
                   <TabsContent value="scooters" className="max-h-[500px] overflow-y-auto scrollbar-hide">
                      <div className="grid grid-cols-3 gap-4 mt-4">
-                        {scooters.map((scooters) => (
-                           <Card key={scooters.id} className="bg-background border shadow-sm">
-                              <CardHeader>
-                                 <img src={scooters.imageUrl} alt={scooters.name} className=" bg-white rounded-md w-full h-72 object-cover" />
-                              </CardHeader>
-                              <CardContent>
-                                 <CardTitle>{scooters.brand}&nbsp;{scooters.name}</CardTitle>
-                              </CardContent>
-                              <CardFooter className="flex justify-between items-center">
-                                 <span className="font-semibold">{scooters.price}</span>
-                                 <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
-                              </CardFooter>
-                           </Card>
-                        ))}
+                        
                      </div>
                   </TabsContent>
       
                   <TabsContent value="bikes" className="max-h-[500px] overflow-y-auto scrollbar-hide">
                      <div className="grid grid-cols-3 gap-4 mt-4">
-                        {bikes.map((bikes) => (
-                           <Card key={bikes.id} className="bg-background border shadow-sm">
-                              <CardHeader>
-                                 <img src={bikes.imageUrl} alt={bikes.name} className="bg-white rounded-md w-full h-72 object-cover" />
-                              </CardHeader>
-                              <CardContent>
-                                 <CardTitle>{bikes.brand}&nbsp;{bikes.name}</CardTitle>
-                              </CardContent>
-                              <CardFooter className="flex justify-between items-center">
-                                 <span className="font-semibold">{bikes.price}</span>
-                                 <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
-                              </CardFooter>
-                           </Card>
-                        ))}
+                        
                      </div>
                   </TabsContent>
 
                   <TabsContent value="cars" className="max-h-[500px] overflow-y-auto scrollbar-hide">
                      <div className="grid grid-cols-3 gap-4 mt-4">
-                        {cars.map((cars) => (
-                           <Card key={cars.id} className="bg-background border shadow-sm">
-                              <CardHeader>
-                                 <img src={cars.imageUrl} alt={cars.name} className="bg-white rounded-md w-full h-72 object-cover" />
-                              </CardHeader>
-                              <CardContent>
-                                 <CardTitle>{cars.brand}&nbsp;{cars.name}</CardTitle>
-                              </CardContent>
-                              <CardFooter className="flex justify-between items-center">
-                                 <span className="font-semibold">{cars.price}</span>
-                                 <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
-                              </CardFooter>
-                           </Card>
-                        ))}
+                        
                      </div>
                   </TabsContent>
       

@@ -1,12 +1,7 @@
 "use client"
 import { LuWashingMachine } from "react-icons/lu";
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger, } from "@/components/ui/tabs"
-import { livingroom } from "@/data/appliances/livingroom";
-import { kitchen } from "@/data/appliances/kitchen";
-import { bedroom } from "@/data/appliances/bedroom";
-import { washing } from "@/data/appliances/washing";
+
 export default function Appliances(){
    return (
          <main className="h-[calc(100vh-112px)] bg-gray text-foreground flex flex-col items-start p-6 px-48">
@@ -40,77 +35,25 @@ export default function Appliances(){
    
                <TabsContent value="livingroom" className="max-h-[500px] overflow-y-auto scrollbar-hide">
                   <div className="grid grid-cols-3 gap-4 mt-4">
-                     {livingroom.map((living) => (
-                        <Card key={living.id} className="bg-background border shadow-sm">
-                           <CardHeader>
-                              <img src={living.imageUrl} alt={living.name} className=" bg-white rounded-md w-full h-72 object-cover" />
-                           </CardHeader>
-                           <CardContent>
-                              <CardTitle>{living.brand}&nbsp;{living.name}</CardTitle>
-                           </CardContent>
-                           <CardFooter className="flex justify-between items-center">
-                              <span className="font-semibold">{living.price}</span>
-                              <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
-                           </CardFooter>
-                        </Card>
-                     ))}
+                     
                   </div>
                </TabsContent>
    
                <TabsContent value="kitchen" className="max-h-[500px] overflow-y-auto scrollbar-hide">
                   <div className="grid grid-cols-3 gap-4 mt-4">
-                     {kitchen.map((kitchenItems) => (
-                        <Card key={kitchenItems.id} className="bg-background border shadow-sm">
-                           <CardHeader>
-                              <img src={kitchenItems.imageUrl} alt={kitchenItems.name} className="bg-white rounded-md w-full h-72 object-cover" />
-                           </CardHeader>
-                           <CardContent>
-                              <CardTitle>{kitchenItems.brand}&nbsp;{kitchenItems.name}</CardTitle>
-                           </CardContent>
-                           <CardFooter className="flex justify-between items-center">
-                              <span className="font-semibold">{kitchenItems.price}</span>
-                              <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
-                           </CardFooter>
-                        </Card>
-                     ))}
+                     
                   </div>
                </TabsContent>
    
                <TabsContent value="bedroom" className="max-h-[500px] overflow-y-auto scrollbar-hide">
                   <div className="grid grid-cols-3 gap-4 mt-4">
-                     {bedroom.map((bedroomItems) => (
-                        <Card key={bedroomItems.id} className="bg-background border shadow-sm">
-                           <CardHeader>
-                              <img src={bedroomItems.imageUrl} alt={bedroomItems.name} className="bg-white rounded-md w-full h-72 object-cover" />
-                           </CardHeader>
-                           <CardContent>
-                              <CardTitle>{bedroomItems.brand}&nbsp;{bedroomItems.name}</CardTitle>
-                           </CardContent>
-                           <CardFooter className="flex justify-between items-center">
-                              <span className="font-semibold">{bedroomItems.price}</span>
-                              <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
-                           </CardFooter>
-                        </Card>
-                     ))}
+                     
                   </div>
                </TabsContent>
    
                <TabsContent value="washing" className="max-h-[500px] overflow-y-auto scrollbar-hide">
                   <div className="grid grid-cols-3 gap-4 mt-4">
-                     {washing.map((washingItems) => (
-                        <Card key={washingItems.id} className="bg-background border shadow-sm">
-                           <CardHeader>
-                              <img src={washingItems.imageUrl} alt={washingItems.name} className="bg-white rounded-md w-full h-72 object-cover" />
-                           </CardHeader>
-                           <CardContent>
-                              <CardTitle>{washingItems.brand}&nbsp;{washingItems.name}</CardTitle>
-                           </CardContent>
-                           <CardFooter className="flex justify-between items-center">
-                              <span className="font-semibold">{washingItems.price}</span>
-                              <Button variant="default" className="bg-highlight text-background">Rent Now</Button>
-                           </CardFooter>
-                        </Card>
-                     ))}
+                     
                   </div>
                </TabsContent>
    
